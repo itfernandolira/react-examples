@@ -1,7 +1,7 @@
 import useCharLimit from "../hooks/useCharLimit";
 
 const Input = () => {
-    const [inputValue, setInputValue] = useCharLimit("");
+    const [inputValue, setInputValue] = useCharLimit("", 10);
 
     return (
         <div>

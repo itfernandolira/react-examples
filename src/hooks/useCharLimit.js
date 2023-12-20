@@ -1,9 +1,9 @@
 import {useState} from 'react'
 
-const useCharLimit = (value) => {
+const useCharLimit = (value, limit) => {
     const [charValue, setCharValue] = useState(value)    
     const validateCharacterLimit = (value) => {
-        if (value.length <= 5) {
+        if (value.length <= limit) {
             setCharValue(value)
         }
     }
