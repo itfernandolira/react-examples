@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 
-const Cocktail = () => {
+const Cocktail = props => {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [cocktails, setCocktails] = useState([]);
 
     useEffect(() => {
-        fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a")
+        fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?f="+props.letter)
             .then(res => res.json())
             .then(
                 (data) => {
@@ -18,7 +18,7 @@ const Cocktail = () => {
                     setError(error);
                 }
             )
-    }, []);
+    }, [props.letter]);
 
     if (error) {
         return <tr><td>Error: {error.message}</td></tr>;

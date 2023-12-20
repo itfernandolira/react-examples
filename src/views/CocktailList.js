@@ -6,7 +6,6 @@ const CocktailList = () => {
     const [letter,setLetter] = useState('a');
 
     const aoClicar = (e) => {
-        console.log('clicou',e.target.innerText);
         setLetter(e.target.innerText);
     }
 
