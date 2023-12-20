@@ -1,5 +1,6 @@
 import Cocktail from "../components/Cocktail";
 import Letters from "../components/Letters";
+import Input from "../components/Input";
 import { useState } from "react";
 
 const CocktailList = () => {
@@ -11,6 +12,7 @@ const CocktailList = () => {
 
     return (
         <>
+            <Input />
             <Letters aoClicar={aoClicar}/>
             <table className="table table-striped table-hover">
                 <thead>
