@@ -1,11 +1,18 @@
 import Cocktail from "../components/Cocktail";
 import Letters from "../components/Letters";
+import { useState } from "react";
 
 const CocktailList = () => {
+    const [letter,setLetter] = useState('a');
+
+    const aoClicar = (e) => {
+        console.log('clicou',e.target.innerText);
+        setLetter(e.target.innerText);
+    }
 
     return (
         <>
-            <Letters />
+            <Letters aoClicar={aoClicar}/>
             <table className="table table-striped table-hover">
                 <thead>
                     <tr>
@@ -16,7 +23,7 @@ const CocktailList = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    <Cocktail />
+                    <Cocktail letter={letter}/>
                 </tbody>
             </table>
         </>

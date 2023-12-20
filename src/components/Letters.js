@@ -1,6 +1,6 @@
 import './letters.css';
 
-const Letters = () => {
+const Letters = props => {
 
     const letters = [];
     for (let i = 65; i <= 90; i++) {
@@ -9,7 +9,7 @@ const Letters = () => {
 
     const showLetters = letters.map( (letter, index) => {
         return (
-            <div key={index} className="letter">
+            <div key={index} className="letter" onClick={props.aoClicar}>
                 {letter}
             </div>
         );
