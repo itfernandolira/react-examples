@@ -1,9 +1,11 @@
 import Cocktail from "../components/Cocktail";
+import Letters from "../components/Letters";
 
 const CocktailList = () => {
 
     return (
         <>
+            <Letters />
             <table className="table table-striped table-hover">
                 <thead>
                     <tr>
